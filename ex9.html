@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>function-4</title>
+</head>
+
+<body>
+   <script>
+      // for (var i = 2; i <= 9; i++) {
+      //    document.write(i + "table output" + "<br>")
+      //    for (var j = 1; j <= 9; j++) {
+      //       document.write(i + " * " + j + " = " + (i * j) + "<br>");
+      //    }
+      //    document.write("<br>");
+      // }
+      // when I want to output multiply table again, functioning is better than repeat
+      function multiply_print() {
+         for (var i = 2; i <= 9; i++) {
+            document.write(i + "table output" + "<br>")
+            for (var j = 1; j <= 9; j++) {
+               document.write(i + " * " + j + " = " + (i * j) + "<br>");
+            }
+            document.write("<br>");
+         }
+      }
+      multiply_print();
+      // multiply_print();
+      // multiply_print();
+   </script>
+</body>
+
+</html>

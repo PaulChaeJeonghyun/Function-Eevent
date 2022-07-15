@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Global variable & Local variable</title>
+</head>
+
+<body>
+   <script>
+      var name = "global"; // global vari. reset & declaration
+
+      function func1() {
+         var name = "local1" // local vari. reset & declaration
+         document.write("name = " + name + "<br>")
+      }
+      function func2() {
+         var name = "local2" // local vari. reset & declaration
+         document.write("name = " + name + "<br>")
+      }
+      function func3() {
+         /*var*/ name = "local3" // local vari. reset & declaration
+         document.write("name = " + name + "<br>")
+      }
+      document.write("name = " + name + "<br>");
+      func1();
+      func2();
+      func3();
+      document.write("name = " + name + "<br>");
+
+
+   </script>
+</body>
+
+</html>
