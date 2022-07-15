@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Function-1</title>
+</head>
+
+<body>
+   <script>
+      //inefficient work
+      // document.write("1. Paul <br>");
+      // document.write("2. Paul <br>");
+      // document.write("3. Paul <br>");
+      // document.write("4. Paul <br>");
+      // document.write("5. Paul <br>");
+
+      //using for
+      // for (let i = 1; i <= 5; i++) {
+      //    document.write(i + ". Paul <br>");
+      // }
+
+      //using function
+      function callName(name, count) {
+         for (let i = 1; i <= count; i++) {
+            document.write(i + ". " + name + "<br> ");
+         }
+      }
+      callName("Paul", 10);
+      callName("Saul", 3);
+
+   </script>
+</body>
+
+</html>
