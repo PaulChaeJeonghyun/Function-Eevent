@@ -7,17 +7,42 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Function-Gallery</title>
    <style>
-      div .image-container {
+      div.image-container {
          position: relative;
       }
 
-      div .image-container img {
+      div.image-container img {
          position: absolute;
          left: 0;
          top: 0;
          width: 120px;
       }
    </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         // array
+         let $images = $("#container1 img");
+
+         $("#btnStart").click(function () {
+            //images 
+            let length = $images.length;
+
+            for (let i = 0; i < length; i++) {
+               //Using eq()function
+               let $img = $images.eq(i);
+               let x = 100 + ((i % 3) * 200);
+               let y = 100 + (parseInt(i / 3) * 200);
+
+               $img.css({
+                  left: x,
+                  top: y
+               });
+
+            }
+         })
+      });
+   </script>
 </head>
 
 <body>
