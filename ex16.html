@@ -7,10 +7,26 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Event Using jQuery-3</title>
    <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      // $(document).ready(function(){
+      // });
+      //same function
+      // $(function(){
+      // });
+
+      $(function () {
+         $(".btn1").click(function () {
+            $("#p1").css({
+               "color": "#F00",
+               "font-weight": "bold"
+            })
+         });
+      })
+   </script>
 </head>
 
 <body>
-   <p>Hello world.</p>
+   <p id="p1">Hello world.</p>
    <button class="btn1">Button1</button>
    <p>How are you?</p>
    <button class="btn2">Button2</button>
