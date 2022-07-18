@@ -21,6 +21,22 @@
                "font-weight": "bold"
             })
          });
+
+         $(".btn2").on({
+            "mouseover focus": function () {
+               $("#p2").css({
+                  "color": "#0f0",
+                  "font-weight": "900"
+               });
+            },
+            "mouseout blur": function () {
+               $("#p2").css({
+                  "color": "#000",
+                  "font-weight": "normal"
+               });
+            }
+         });
+
       })
    </script>
 </head>
@@ -28,7 +44,7 @@
 <body>
    <p id="p1">Hello world.</p>
    <button class="btn1">Button1</button>
-   <p>How are you?</p>
+   <p id="p2">How are you?</p>
    <button class="btn2">Button2</button>
 </body>
 
