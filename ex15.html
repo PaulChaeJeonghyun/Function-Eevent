@@ -8,12 +8,20 @@
    <title>Event Using jQuery-2</title>
    <script src="lib/jquery-3.6.0.min.js"></script>
    <script>
-      //Group Event
+      //Group Event(using on())
       $(document).ready(function () {
-         $("#btn").on("mouseover focus", function () {
-            alert("Hello world!");
-         })
-      })
+         //1st way
+         // $("#btn").on("mouseover focus", function () {
+         //    alert("Hello world!");
+         //    console.log("event occur")
+         // });
+         //2nd way
+         $("#btn").on({
+            "mouseover focus": function () {
+               console.log("event occur");
+            }
+         });
+      });
    </script>
 </head>
 
