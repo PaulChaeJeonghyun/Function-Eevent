@@ -5,12 +5,12 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Event Using jQuery-1</title>
+   <title>Event Using jQuery-2</title>
    <script src="lib/jquery-3.6.0.min.js"></script>
    <script>
-      //Single Event
+      //Group Event
       $(document).ready(function () {
-         $("#btn").click(function () {
+         $("#btn").on("mouseover focus", function () {
             alert("Hello world!");
          })
       })
