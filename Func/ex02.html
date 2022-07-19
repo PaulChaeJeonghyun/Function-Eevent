@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Function-2(parameter)</title>
+   <script>
+      // hi1, hi2 are normal function.
+      function hi1() {
+         alert("Hi!");
+      }
+      function hi2() {
+         alert("Hello!");
+      }
+
+      //exec() takes function as a parameter.
+      function exec(func) {   //func = hi1;    func = hi2; 
+         func();
+      }
+
+      exec(hi1);
+      exec(hi2);
+
+   </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
