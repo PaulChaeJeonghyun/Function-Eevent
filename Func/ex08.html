@@ -7,10 +7,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>function-8</title>
    <script>
+      //Usually not using
+      // let hi = new Function("name", "document.write('Welcome ' + name)");
+      // hi("Paul");
 
-      let hi = new Function("name", "document.write('Welcome ' + name)");
-      hi("Paul");
 
+      //Anonymous function expansion
+      //for preventing conflict with another function
+      (function (name) {
+         document.write("Welcome " + name);
+      })("Paul");
 
    </script>
 </head>
