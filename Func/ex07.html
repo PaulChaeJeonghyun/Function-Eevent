@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Function-7(Using normal function for a program)</title>
+   <style>
+      #container {
+         border: 1px solid blue;
+         line-height: 10px;
+      }
+   </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      let count = 0; //declaration and reset global vari.
+      let $container = null;
+
+      $(document).ready(function () {
+         $container = $("#container");
+         hi(); // calling normal function
+
+         $("#btnPrint").click(function () {
+            hi();
+         });
+      });
+      //normal function
+      function hi() {
+         $container.append("<p>" + count + "Hello world");
+         count++;
+      }
+
+   </script>
+</head>
+
+<body>
+   <button id="btnPrint">Print out</button>
+   <div id="container">
+
+   </div>
+</body>
+
+</html>
