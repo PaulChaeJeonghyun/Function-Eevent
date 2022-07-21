@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Function-9(Nested function for Arithmetic operation)</title>
+   <script>
+      function calculator(op, num1, num2) {
+         let result = "";
+
+         switch (op) {
+            case "+":
+               result = add(num1, num2);
+               break;
+            case "-":
+               result = sub(num1, num2);
+               break;
+            case "*":
+               result = mul(num1, num2);
+               break;
+            case "/":
+               result = div(num1, num2);
+               break;
+            default:
+               result = "not supported operation"
+         }
+         funtion add(num1, num2){
+            return num1 + num2;
+         }
+         funtion sub(num1, num2){
+            return num1 - num2;
+         }
+         funtion mul(num1, num2){
+            return num1 * num2;
+         }
+         funtion div(num1, num2){
+            return num1 / num2;
+         }
+      }
+      document.write("Reult : " + calculator("+", 100, 200) + "<br/>");
+   </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
