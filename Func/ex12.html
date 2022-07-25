@@ -32,9 +32,11 @@
       }
       function print1(result) {
          document.write("Print1. result of provided number : " + result + "<br>");
+         print2(result, print3);
       }
       function print2(result) {
-         document.write("Prin2. Answer : " + result + "<br>");
+         document.write("Print2. Answer : " + result + "<br>");
+         callback(result);
       }
       function print3(result) {
          document.write("Print.3 Result : " + result + "<br>");
@@ -45,8 +47,9 @@
       // It`s easy to maintenance and changing
 
       calculator("-", 500, 300, print1);
-      calculator("-", 500, 300, print2);
-      calculator("-", 500, 300, print3);
+
+      // calculator("-", 500, 300, print2);
+      // calculator("-", 500, 300, print3);
 
    </script>
 </head>
