@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Callback-1</title>
+   <title>Callback-1(normal function)</title>
    <script>
       //Normal function
       function calculator1(op, num1, num2) {
@@ -28,10 +28,10 @@
                result = "not supported operation"
          }
          //Logic processing
-         document.write("Result of provided 2 numbers : " + result);
+         document.write("Result of provided 2 numbers : " + result + "<br>");
       }
       //Normal Function
-      function calculator1(op, num1, num2) {
+      function calculator2(op, num1, num2) {
          var result = "";
 
          switch (op) {
@@ -50,9 +50,10 @@
             default:
                result = "not supported operation"
          }
-         document.write("Answer : " + result);
+         document.write("Answer : " + result + "<br>");
       }
       calculator1("-", 500, 300);
+      calculator2("*", 500, 300);
    </script>
 </head>
 
