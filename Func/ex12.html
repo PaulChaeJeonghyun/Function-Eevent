@@ -8,7 +8,7 @@
    <title>Callback-2(Callback function)</title>
    <script>
       //Normal function
-      function calculator1(op, num1, num2) {
+      function calculator(op, num1, num2) {
          var result = "";
          //logic implementation
          switch (op) {
@@ -28,11 +28,11 @@
                result = "not supported operation"
          }
 
-         document.write("Result of provided 2 numbers : " + result + "<br>");
+         document.write(result);
       }
 
-      calculator1("-", 500, 300);
-      calculator2("*", 500, 300);
+      calculator("-", 500, 300);
+
    </script>
 </head>
 
