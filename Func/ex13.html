@@ -8,11 +8,17 @@
    <title>callback-3</title>
    <script>
       //normal function declaration and calling
-      function add(n1, n2) {
-         return n1 + n2;
+      function add(n1, n2, callback) {
+         //return n1 + n2;
+         let temp = n1 + n2;
+         callback(temp);
+         document.write("add() fuction" + temp + "<br>")
       }
-      let result = add(10, 20)
-      document.write("Result : " + result);
+      function result(value) {
+         document.write("result() function Result : " + value + "<br>");
+      }
+      add(50, 100, result);
+
    </script>
 </head>
 
