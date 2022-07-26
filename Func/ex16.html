@@ -54,6 +54,42 @@
          background-image: url(images/newbtn.bar.6.png);
       }
    </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         tabMenu("#tabmenu1");
+      });
+
+      function tabMenu(selector) {
+         let $tabMenu = null;
+         let $menuItems = null;
+         let $selectedMenuItem = null;
+
+
+         function init(selector) {
+            $tabMenu = $(selector);
+            $menuItems = $tabMenu.find("li");
+         }
+
+         function initEvent() {
+            $menuItems.click(function () {
+               setSelectItem($(this));
+            });
+         }
+
+         function setSelectItem($item) {
+            if ($selectedMenuItem != null) {
+               $selectedMenuItem.removeClass("select");
+            }
+            $selectedMenuItem = $item;
+            $selectedMenuItem.addClass("select");
+
+            $("#info").html($selectedMenuItem.index());
+         }
+         init(selector);
+         initEvent();
+      }
+   </script>
 </head>
 
 <body>
