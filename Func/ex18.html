@@ -7,16 +7,34 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Closure-1</title>
    <script>
-      function add() {
-         let cnt = 0;
-         cnt++;
-         return cnt;
+      // function add() {
+      //    let cnt = 0;
+      //    cnt++;
+      //    return cnt;
+      // }
+      // document.write("1st cnt value : " + add() + "<br>");
+      // document.write("2nd cnt value : " + add() + "<br>");
+      // document.write("3rd cnt value : " + add() + "<br>");
+      // document.write("4th cnt value : " + add() + "<br>");
+      // document.write("5th cnt value : " + add() + "<br>");
+
+      // Using closure
+      function creatCounter() {
+         let cnt = 0;    //local function
+         function add() {
+            //add() is closure function
+            //closure - used local variation of global function
+            cnt++;
+            return cnt;
+         }
+         return add;
       }
-      document.write("1st cnt value : " + add() + "<br>");
-      document.write("2nd cnt value : " + add() + "<br>");
-      document.write("3rd cnt value : " + add() + "<br>");
-      document.write("4th cnt value : " + add() + "<br>");
-      document.write("5th cnt value : " + add() + "<br>");
+      let counter = creatCounter();
+      document.write("1st cnt value : " + counter() + "<br>");
+      document.write("2nd cnt value : " + counter() + "<br>");
+      document.write("3rd cnt value : " + counter() + "<br>");
+      document.write("4th cnt value : " + counter() + "<br>");
+      document.write("5th cnt value : " + counter() + "<br>");
    </script>
 </head>
 
