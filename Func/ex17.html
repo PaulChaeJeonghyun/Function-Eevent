@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Callback - 5</title>
+   <style>
+      .tab-menu {
+         list-style: none;
+         height: 80px;
+      }
+
+      .tab-menu li {
+         width: 100px;
+         height: 40px;
+         background-position-y: 0;
+         overflow: hidden;
+         display: block;
+         float: left;
+      }
+
+      .tab-menu li:hover {
+         background-position-y: -40px;
+      }
+
+      .tab-menu li.select {
+         background-position-y: -80px;
+         height: 80px;
+      }
+
+      .tab-menu li.menuitem1 {
+         background-image: url(images/newbtn.bar.1.png);
+      }
+
+      .tab-menu li.menuitem2 {
+         background-image: url(images/newbtn.bar.2.png);
+      }
+
+      .tab-menu li.menuitem3 {
+         background-image: url(images/newbtn.bar.3.png);
+      }
+
+      .tab-menu li.menuitem4 {
+         background-image: url(images/newbtn.bar.4.png);
+      }
+
+      .tab-menu li.menuitem5 {
+         background-image: url(images/newbtn.bar.5.png);
+      }
+
+      .tab-menu li.menuitem6 {
+         background-image: url(images/newbtn.bar.6.png);
+      }
+   </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         tabMenu("#tabmenu1", onSelectItem);
+      });
+
+      function tabMenu(selector, callback) {
+         let $tabMenu = null;
+         let $menuItems = null;
+         let $selectedMenuItem = null;
+
+
+         function init(selector) {
+            $tabMenu = $(selector);
+            $menuItems = $tabMenu.find("li");
+         }
+
+         function initEvent() {
+            $menuItems.click(function () {
+               setSelectItem($(this));
+            });
+         }
+
+         function setSelectItem($item) {
+            if ($selectedMenuItem != null) {
+               $selectedMenuItem.removeClass("select");
+            }
+            $selectedMenuItem = $item;
+            $selectedMenuItem.addClass("select");
+
+            //$("#info").html($selectedMenuItem.index());
+            if (callback != null) {
+
+            }
+
+         }
+         init(selector);
+         initEvent();
+      }
+      //logic operations
+      function onSelectItem(index) {
+         $("#info").html(index);
+      }
+
+   </script>
+</head>
+
+<body>
+   <ul class="tab-menu" id="tabmenu1">
+      <li class="menuitem1"></li>
+      <li class="menuitem2"></li>
+      <li class="menuitem3"></li>
+      <li class="menuitem4"></li>
+      <li class="menuitem5"></li>
+      <li class="menuitem6"></li>
+   </ul>
+   <div>Selected index value : <span id="info"></span></div>
+</body>
+
+</html>
